@@ -4,27 +4,18 @@ const Router = require("./routes/routes")
 const cors = require("cors") 
 const app = express()
 const passport = require('passport')
-const path = require('path')
-
 
 const PORT = process.env.PORT||4000
 
 require("./config/database")
 
-
 app.use(cors())
 app.use(passport.initialize())
 app.use(express.json())
 app.use("/api", Router)
-
 app.set("port",PORT)
-
-app.use(express.static(path.join(__dirname, "/client/build")));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build/index.html'));
-});
 app.get("/", (req, res) => {
-    res.send("SERVIDOR CREADO!")
+    res.send("<h1>nkunku sos un perro aguante foden</h1>")
 })
 
 app.listen(PORT, () => {

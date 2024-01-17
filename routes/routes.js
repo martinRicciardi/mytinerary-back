@@ -1,8 +1,9 @@
 const Router = require("express").Router()
 
-const citiesControllers = require("../controllers/citiesControllers");
-const {getCities, getOneCity, addCity, modifyCity, removeCity} = citiesControllers
+const citiesControllers = require("../controllers/citiesControllers"); //llamas a los controladores 
+const {getCities, getOneCity, addCity, modifyCity, removeCity} = citiesControllers //agarras los metodos de los controladores 
 
+//definis el endpoint para que cuando le peges desde el front o postman, dependiendo la peticion (ej: .get), haga cada accion (ej: getCities)
 Router.route("/cities")
 .get(getCities)
 .post(addCity)

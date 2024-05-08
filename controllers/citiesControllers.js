@@ -27,7 +27,7 @@ const citiesControllers = {
         })
     },
     addCity: async (req, res) => {
-        const { cityname, country, image, description } = req.body
+        const { cityname, country, image, description } = req.body //vienen las variables con el nombre que vos haces el dispatch(o sea el parametro como lo recibis en las actions, claro ejemplo es el controlador de comentarios, porque en el dispatch pasa comment, cuando la action hace la peticion al endpoint, el parametro que pasa es comment, entonces eso es lo que recibe por body)
         let city
         let error = null
         try{

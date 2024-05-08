@@ -4,7 +4,7 @@ const commentsControllers = {
     addComment: async (req, res) => {
         const { itineraryId } = req.body.comment
         const comment = req.body.comment.comments.comment
-        console.log(req.body);
+        // console.log(req.body);
         const {user} = req
         try {
         const newComment = await Itinerary.findOneAndUpdate({ _id: itineraryId }, 
